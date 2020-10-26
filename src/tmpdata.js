@@ -312,19 +312,19 @@ const utenti = [
     nome: "filippo",
     colore: "blue",
     jolly: 3,
-    punti: 3
+    punti: 5
   },
   {
     nome: "anna",
     colore: "green",
     jolly: 1,
-    punti: 3
+    punti: 25
   },
   {
     nome: "dario",
     colore: "orange",
     jolly: 2,
-    punti: 3
+    punti: 6
   },
   {
     nome: "sandro",
@@ -343,7 +343,7 @@ const utenti = [
     nome: "samuel",
     colore: "#286CB2",
     jolly: 2,
-    punti: 3
+    punti: 15
   }
 ];
 export { caselle, utenti };
