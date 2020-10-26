@@ -33,12 +33,12 @@ export default function Casella(props) {
         width: item.w,
         height: item.h,
         backgroundColor: item.special ? "#88123A" : "none",
-        color: item.special ? "white" : "#666",
-        border: "1px solid red"
+        color: item.special ? "white" : "#666"
+        // border: "1px solid red"
       }}
     >
       <StyledTitoloCasella>
-        <small>{item.id}</small>
+        {/*<small>{item.id}</small>*/}
         {item.special ? "IMPREVISTO" : ""}
       </StyledTitoloCasella>
 
