@@ -48,10 +48,9 @@ export default function Pedina(props) {
             zIndex: zindex,
             boxShadow: "2px 2px 5px 2px #333",
             cursor: "pointer",
-            border: "2px solid #fff",
-            transition: "left 0s ease 0s, all 0.5s ease 2s"
+            border: "2px solid #fff"
           }}
-          title={utente.nome + "-" + chiave}
+          title={utente.nome}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
         >
