@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Motion, spring } from "react-motion";
+import { motion } from "framer-motion";
 
 const StyledColonnaUtente = styled.div`
   position: relative;
@@ -47,20 +47,15 @@ export default function ColonnaUtente(props) {
   const listaJolly = [];
   for (let i = 0; i < utente.jolly; i++) {
     listaJolly.push(
-      <Motion
+      <motion.div
         key={i}
-        defaultStyle={{ top: 0 }}
-        style={{
-          top: spring(88 + i * 80, { stiffness: 41, damping: 8 })
+        animate={{
+          y: 88 + i * 80
         }}
+        transition={{ delay: i * 0.3, duration: (i + 1) * 0.5 }}
       >
-        {(interpolatingStyle) => (
-          <Jolly
-            src="https://dev-hl.terotero.it/img/original/JollyRound.png"
-            style={interpolatingStyle}
-          ></Jolly>
-        )}
-      </Motion>
+        <Jolly src="https://dev-hl.terotero.it/img/original/JollyRound.png"></Jolly>
+      </motion.div>
     );
   }
 

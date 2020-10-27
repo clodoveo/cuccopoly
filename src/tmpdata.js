@@ -312,38 +312,62 @@ const utenti = [
     nome: "filippo",
     colore: "blue",
     jolly: 3,
-    punti: 5
+    punti: 5,
+    NumeroTransazioni: 10,
+    NumeroAcquisizioni: 2,
+    NumeroIncarichiHomeStaging: 1,
+    NumeroJollyPersiPerPenalita: 0
   },
   {
     nome: "anna",
     colore: "green",
     jolly: 1,
-    punti: 25
+    punti: 25,
+    NumeroTransazioni: 10,
+    NumeroAcquisizioni: 2,
+    NumeroIncarichiHomeStaging: 1,
+    NumeroJollyPersiPerPenalita: 0
   },
   {
     nome: "dario",
     colore: "orange",
     jolly: 2,
-    punti: 6
+    punti: 6,
+    NumeroTransazioni: 10,
+    NumeroAcquisizioni: 2,
+    NumeroIncarichiHomeStaging: 1,
+    NumeroJollyPersiPerPenalita: 0
   },
   {
     nome: "sandro",
     colore: "purple",
     jolly: 2,
-    punti: 3
+    punti: 3,
+    NumeroTransazioni: 10,
+    NumeroAcquisizioni: 2,
+    NumeroIncarichiHomeStaging: 1,
+    NumeroJollyPersiPerPenalita: 0
   },
 
   {
     nome: "milena",
     colore: "red",
     jolly: 2,
-    punti: 3
+    punti: 3,
+    NumeroTransazioni: 10,
+    NumeroAcquisizioni: 2,
+    NumeroIncarichiHomeStaging: 1,
+    NumeroJollyPersiPerPenalita: 0
   },
   {
     nome: "samuel",
     colore: "#286CB2",
     jolly: 2,
-    punti: 15
+    punti: 15,
+    NumeroTransazioni: 10,
+    NumeroAcquisizioni: 2,
+    NumeroIncarichiHomeStaging: 1,
+    NumeroJollyPersiPerPenalita: 0
   }
 ];
 export { caselle, utenti };
