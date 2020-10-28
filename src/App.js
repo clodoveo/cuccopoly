@@ -8,6 +8,12 @@ export default function App() {
   //console.log(utenti);
 
   const [utenteSelezionato, setUtenteSelezionato] = useState(false);
+  const [vediFish, setVediFish] = useState(true);
+
+  const settaUtente = (utente) => {
+    setUtenteSelezionato(utente);
+    setVediFish((old) => !old);
+  };
 
   return (
     <div className="App">
@@ -15,8 +21,9 @@ export default function App() {
         <ContenitoreUtenti
           utenti={utenti}
           utenteSelezionato={utenteSelezionato}
+          vediFish={vediFish}
         />
-        <Pedine utenti={utenti} setUtenteSelezionato={setUtenteSelezionato} />
+        <Pedine utenti={utenti} setUtenteSelezionato={settaUtente} />
       </Tabellone>
     </div>
   );

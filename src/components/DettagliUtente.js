@@ -1,18 +1,66 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function DettagliUtente(props) {
   const { utente } = props;
+  const { vediFish } = props;
+
+  const varianti = {
+    iniziale: {
+      display: "none",
+      opacity: 1,
+      clipPath: "circle(0px at 0px 0px)",
+      flexDirection: "column"
+    },
+    finale: {
+      display: "flex",
+      flexDirection: "column",
+      opacity: 1,
+      clipPath: "circle(1000px at 0px 0px)",
+
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  const animazione = vediFish ? "iniziale" : "finale";
   return (
-    <div>
-      <div>{utente.nome}</div>
-      <div>Numero Transazioni: {utente.NumeroTransazioni}</div>
-      <div>Numero Acquisizioni: {utente.NumeroAcquisizioni}</div>
-      <div>
+    <motion.div
+      animate={animazione}
+      variants={varianti}
+      style={{
+        color: "#666",
+        width: "100%",
+        backgroundColor: "#eee",
+        padding: "50px",
+        flexDirection: "column",
+        justifyItems: "space-between"
+      }}
+    >
+      <div
+        style={{
+          fontSize: "30px",
+          marginBottom: "25px",
+          borderBottom: "1px dashed #666",
+          textTransform: "capitalize",
+          flex: 2
+        }}
+      >
+        {utente.nome}
+      </div>
+      <div style={{ flex: 1 }}>
+        Numero Transazioni: {utente.NumeroTransazioni}
+      </div>
+      <div style={{ flex: 1 }}>
+        Numero Acquisizioni: {utente.NumeroAcquisizioni}
+      </div>
+      <div style={{ flex: 1 }}>
         Numero Incarichi Home-Staging: {utente.NumeroIncarichiHomeStaging}
       </div>
-      <div>
+      <div style={{ flex: 1 }}>
         Numero Jolly Persi Per Penalità:{utente.NumeroJollyPersiPerPenalita}{" "}
       </div>
-    </div>
+    </motion.div>
   );
 }

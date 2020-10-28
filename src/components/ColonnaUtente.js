@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -43,15 +43,16 @@ const NomeUtente = styled.div`
 
 export default function ColonnaUtente(props) {
   const { utente } = props;
+  const { vediFish } = props;
+  const [statoAnimazione, setStatoAnimazione] = useState(false);
+  useEffect(() => setStatoAnimazione(true), []);
 
   const listaJolly = [];
   for (let i = 0; i < utente.jolly; i++) {
     listaJolly.push(
       <motion.div
         key={i}
-        animate={{
-          y: 88 + i * 80
-        }}
+        animate={statoAnimazione ? { y: 88 + i * 80 } : { y: 88 + i * 80 }}
         transition={{ delay: i * 0.3, duration: (i + 1) * 0.5 }}
       >
         <Jolly src="https://dev-hl.terotero.it/img/original/JollyRound.png"></Jolly>
@@ -59,8 +60,13 @@ export default function ColonnaUtente(props) {
     );
   }
 
+  let mstyle = {};
+  if (!vediFish) {
+    mstyle = { display: "none" };
+  }
+
   return (
-    <StyledColonnaUtente>
+    <StyledColonnaUtente style={mstyle}>
       <BollinoUtente style={{ backgroundColor: utente.colore }}>
         <Elefantino
           alt="what"

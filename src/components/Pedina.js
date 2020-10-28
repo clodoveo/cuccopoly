@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -15,6 +15,9 @@ export default function Pedina(props) {
   const [zindex, setZindex] = useState(500);
   const [x, setX] = useState(posizioneUtente.x + scostamentoPosizioneX);
   const [y, setY] = useState(posizioneUtente.y + scostamentoPosizioneY);
+  const [statoAnimazione, setStatoAnimazione] = useState("iniziale");
+
+  useEffect(() => setStatoAnimazione("finale"), []);
 
   const mouseEnterHandler = () => {
     setUtenteSelezionato(utente);
@@ -24,20 +27,27 @@ export default function Pedina(props) {
     setUtenteSelezionato(false);
   };
 
+  const varianti = {
+    iniziale: { x: 0, bottom: 0, scale: 1, rotate: 1 },
+    finale: {
+      x: x,
+      bottom: y,
+      rotate: [0, 90, Math.random() * 15],
+      scale: [1, 2.5, 1],
+      transition: {
+        duration: Math.random() + 0.5,
+        //delay: Math.random() + 1,
+        ease: "easeIn"
+      }
+    }
+  };
+
   return (
     <motion.div
-      initial={{ x: 0, bottom: 0, scale: 1, rotate: 0 }}
-      animate={{
-        x: x,
-        bottom: y,
-        rotate: [0, 90, Math.random() * 15],
-        scale: [1, 2.5, 1]
-      }}
-      transition={{
-        duration: Math.random() + 0.5,
-        delay: Math.random() + 1,
-        ease: "easeIn"
-      }}
+      initial={{}}
+      animate={statoAnimazione}
+      variants={varianti}
+      whileHover={{ scale: 1.4, zIndex: 501, transition: { duration: 0.5 } }}
       style={{
         backgroundColor: utente.colore,
         borderRadius: "50%",
@@ -54,7 +64,7 @@ export default function Pedina(props) {
       onMouseEnter={mouseEnterHandler}
       onMouseLeave={mouseLeaveHandler}
     >
-      <span
+      <motion.span
         style={{
           fontSize: "40px",
           color: "white",
@@ -66,7 +76,7 @@ export default function Pedina(props) {
         }}
       >
         {utente.nome.charAt(0)}
-      </span>
+      </motion.span>
     </motion.div>
   );
 }

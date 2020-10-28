@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ColonnaUtente from "./ColonnaUtente";
 import DettagliUtente from "./DettagliUtente";
@@ -16,29 +16,27 @@ const StyledContenitoreUtenti = styled.div`
 export default function ContenitoreUtenti(props) {
   const { utenti } = props;
   const { utenteSelezionato } = props;
+  const { vediFish } = props;
 
-  let returned = <></>;
-  if (utenteSelezionato) {
-    returned = (
-      <StyledContenitoreUtenti
-        style={{
-          backgroundColor: "#88123A",
-          opacity: "0.95",
-          boxShadow: "rgb(51, 51, 51) 2px 2px 5px 2px",
-          color: "white"
-        }}
-      >
-        <DettagliUtente utente={utenteSelezionato}></DettagliUtente>
-      </StyledContenitoreUtenti>
-    );
-  } else {
-    returned = (
-      <StyledContenitoreUtenti>
-        {utenti.map((u, k) => (
-          <ColonnaUtente key={k} utente={u}></ColonnaUtente>
-        ))}
-      </StyledContenitoreUtenti>
-    );
+  let mStyle = {};
+  if (!vediFish) {
+    mStyle = {
+      backgroundColor: "#88123A",
+      opacity: "0.95",
+      boxShadow: "rgb(51, 51, 51) 2px 2px 5px 2px",
+      color: "white"
+    };
   }
-  return returned;
+
+  return (
+    <StyledContenitoreUtenti style={mStyle}>
+      {utenti.map((u, k) => (
+        <ColonnaUtente key={k} utente={u} vediFish={vediFish}></ColonnaUtente>
+      ))}
+      <DettagliUtente
+        utente={utenteSelezionato}
+        vediFish={vediFish}
+      ></DettagliUtente>
+    </StyledContenitoreUtenti>
+  );
 }
