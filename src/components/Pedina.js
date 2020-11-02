@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+
 import { motion } from "framer-motion";
 
 import { caselle } from "../tmpdata";
@@ -12,9 +12,9 @@ export default function Pedina(props) {
   const scostamentoPosizioneX = 0 + chiave * 2;
   const scostamentoPosizioneY = 5 + chiave * 8;
 
-  const [zindex, setZindex] = useState(500);
-  const [x, setX] = useState(posizioneUtente.x + scostamentoPosizioneX);
-  const [y, setY] = useState(posizioneUtente.y + scostamentoPosizioneY);
+  const [zindex] = useState(500);
+  const [x] = useState(posizioneUtente.x + scostamentoPosizioneX);
+  const [y] = useState(posizioneUtente.y + scostamentoPosizioneY);
   const [statoAnimazione, setStatoAnimazione] = useState("iniziale");
 
   useEffect(() => setStatoAnimazione("finale"), []);
@@ -49,7 +49,7 @@ export default function Pedina(props) {
       variants={varianti}
       whileHover={{ scale: 1.4, zIndex: 501, transition: { duration: 0.5 } }}
       style={{
-        backgroundColor: utente.colore,
+        backgroundColor: utente.colore ? utente.colore : "#666",
         borderRadius: "50%",
         width: "50px",
         height: "50px",
