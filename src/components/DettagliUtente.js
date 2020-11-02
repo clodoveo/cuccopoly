@@ -49,6 +49,7 @@ export default function DettagliUtente(props) {
       >
         {utente.nome}
       </div>
+      <div style={{ flex: 1 }}>Punti: {utente.punti}</div>
       <div style={{ flex: 1 }}>
         Numero Transazioni: {utente.NumeroTransazioni}
       </div>

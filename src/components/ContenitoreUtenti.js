@@ -15,7 +15,7 @@ const StyledContenitoreUtenti = styled.div`
   overflow-y: visible;
   ::-webkit-scrollbar {
     width: 0px;
-    height: 4px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
     background: #888;
@@ -42,7 +42,7 @@ export default function ContenitoreUtenti(props) {
 
   return (
     <StyledContenitoreUtenti style={mStyle}>
-      <div style={{ minWidth: "2000px", display: "flex" }}>
+      <div style={{ width: 95 * utenti.length, display: "flex" }}>
         {utenti.map((u, k) => (
           <ColonnaUtente key={k} utente={u} vediFish={vediFish}></ColonnaUtente>
         ))}
