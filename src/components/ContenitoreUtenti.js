@@ -12,7 +12,7 @@ const StyledContenitoreUtenti = styled.div`
   top: 269px;
   /* display: flex; */
   overflow-x: scroll;
-  overflow-y: visible;
+  overflow-y: hidden;
   ::-webkit-scrollbar {
     width: 0px;
     height: 6px;
