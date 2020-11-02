@@ -16,10 +16,21 @@ export default function App() {
     setVediFish((old) => !old);
   };
 
+  const getQueryParams = (params, url) => {
+    let href = url;
+    //this expression is to get the query strings
+    let reg = new RegExp("[?&]" + params + "=([^&#]*)", "i");
+    let queryString = reg.exec(href);
+    return queryString ? queryString[1] : null;
+  };
+
   useEffect(() => {
     const getUsers = async () => {
+      const agenziaPar = getQueryParams("agenzia", window.location.href);
+
+      const par = agenziaPar ? agenziaPar : 1;
       const res = await fetch(
-        "https://dev-hl.terotero.it/api/gamification/users_agenzia/2/"
+        "https://dev-hl.terotero.it/api/gamification/users_agenzia/" + par + "/"
       );
       const users = await res.json();
       setUtenti(users);

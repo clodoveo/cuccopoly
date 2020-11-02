@@ -10,7 +10,19 @@ const StyledContenitoreUtenti = styled.div`
   position: absolute;
   left: 275px;
   top: 269px;
-  display: flex;
+  /* display: flex; */
+  overflow-x: scroll;
+  overflow-y: visible;
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #888;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #871239;
+  }
 `;
 
 export default function ContenitoreUtenti(props) {
@@ -30,13 +42,15 @@ export default function ContenitoreUtenti(props) {
 
   return (
     <StyledContenitoreUtenti style={mStyle}>
-      {utenti.map((u, k) => (
-        <ColonnaUtente key={k} utente={u} vediFish={vediFish}></ColonnaUtente>
-      ))}
-      <DettagliUtente
-        utente={utenteSelezionato}
-        vediFish={vediFish}
-      ></DettagliUtente>
+      <div style={{ minWidth: "2000px", display: "flex" }}>
+        {utenti.map((u, k) => (
+          <ColonnaUtente key={k} utente={u} vediFish={vediFish}></ColonnaUtente>
+        ))}
+        <DettagliUtente
+          utente={utenteSelezionato}
+          vediFish={vediFish}
+        ></DettagliUtente>
+      </div>
     </StyledContenitoreUtenti>
   );
 }
