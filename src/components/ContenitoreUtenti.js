@@ -4,8 +4,9 @@ import ColonnaUtente from "./ColonnaUtente";
 import DettagliUtente from "./DettagliUtente";
 
 const StyledContenitoreUtenti = styled.div`
-  width: 563px;
+  width: 566px;
   height: 340px;
+  margin-left: 3px;
   /* border: 1px solid red; */
   position: absolute;
   left: 275px;
@@ -35,14 +36,21 @@ export default function ContenitoreUtenti(props) {
     mStyle = {
       backgroundColor: "#88123A",
       opacity: "0.95",
-      boxShadow: "rgb(51, 51, 51) 2px 2px 5px 2px",
+      // boxShadow: "rgb(51, 51, 51) 2px 2px 5px 2px",
       color: "white"
     };
   }
 
   return (
     <StyledContenitoreUtenti style={mStyle}>
-      <div style={{ width: 95 * utenti.length, display: "flex" }}>
+      <div
+        style={{
+          minWidth: 566,
+          minHeight: 340,
+          width: 95 * utenti.length,
+          display: "flex"
+        }}
+      >
         {utenti.map((u, k) => (
           <ColonnaUtente key={k} utente={u} vediFish={vediFish}></ColonnaUtente>
         ))}

@@ -31,11 +31,14 @@ export default function DettagliUtente(props) {
       variants={varianti}
       style={{
         color: "#666",
-        width: "100%",
+        width: "calc(100% + 2px)",
         backgroundColor: "#eee",
         padding: "50px",
         flexDirection: "column",
-        justifyItems: "space-between"
+        justifyItems: "space-between",
+        position: "relative"
+        //marginLeft: "-50px"
+        // left: "2px"
       }}
     >
       <div
