@@ -20,9 +20,9 @@ const caselle = [
   {
     id: 2,
     x: 258,
-    y: 0,
-    w: 76,
-    h: 93,
+    y: -5,
+    w: 80,
+    h: 105,
     special: true,
     testo: "Pizzette per tutti!"
   },
@@ -47,11 +47,11 @@ const caselle = [
   {
     id: 5,
     x: 506,
-    y: 0,
-    w: 76,
-    h: 93,
-    special: false,
-    testo: ""
+    y: -5,
+    w: 80,
+    h: 105,
+    special: true,
+    testo: "Ruba un Jolly o donalo a chi vuoi"
   },
   {
     id: 6,
@@ -101,11 +101,11 @@ const caselle = [
   {
     id: 11,
     x: 1003,
-    y: 0,
-    w: 76,
-    h: 93,
-    special: false,
-    testo: ""
+    y: -5,
+    w: 80,
+    h: 105,
+    special: true,
+    testo: "Porta una torta"
   },
   {
     id: 12,
@@ -118,12 +118,12 @@ const caselle = [
   },
   {
     id: 13,
-    x: 1003,
-    y: 208,
-    w: 76,
-    h: 103,
-    special: false,
-    testo: ""
+    x: 1005,
+    y: 212,
+    w: 80,
+    h: 105,
+    special: true,
+    testo: "Lascia il caffè offerto a tutto lo staff"
   },
   {
     id: 14,
@@ -163,12 +163,12 @@ const caselle = [
   },
   {
     id: 18,
-    x: 920,
-    y: 643,
-    w: 76,
+    x: 922,
+    y: 648,
+    w: 80,
     h: 103,
-    special: false,
-    testo: ""
+    special: true,
+    testo: "Pizzette per tutti!"
   },
   {
     id: 19,
@@ -182,11 +182,11 @@ const caselle = [
   {
     id: 20,
     x: 755,
-    y: 643,
-    w: 76,
+    y: 649,
+    w: 80,
     h: 103,
-    special: false,
-    testo: ""
+    special: true,
+    testo: "Porta una torta!"
   },
   {
     id: 21,
@@ -218,11 +218,11 @@ const caselle = [
   {
     id: 24,
     x: 423,
-    y: 643,
-    w: 76,
+    y: 649,
+    w: 80,
     h: 103,
-    special: false,
-    testo: ""
+    special: true,
+    testo: "Riordina i fogli visita nelle rispettive cartelline"
   },
   {
     id: 25,
@@ -263,11 +263,11 @@ const caselle = [
   {
     id: 29,
     x: 9,
-    y: 643,
-    w: 76,
+    y: 649,
+    w: 80,
     h: 103,
-    special: false,
-    testo: ""
+    special: true,
+    testo: "Pizzette per tutti!"
   },
   {
     id: 30,
