@@ -5,8 +5,6 @@ import Pedine from "./components/Pedine";
 import { caselle } from "./tmpdata";
 
 export default function App() {
-  //console.log(utenti);
-
   const [utenteSelezionato, setUtenteSelezionato] = useState(false);
   const [vediFish, setVediFish] = useState(true);
   const [utenti, setUtenti] = useState(false);
