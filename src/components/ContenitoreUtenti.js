@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import ColonnaUtente from "./ColonnaUtente";
 import DettagliUtente from "./DettagliUtente";
 
 const StyledContenitoreUtenti = styled.div`
   width: 566px;
-  height: 340px;
+  height: 367px;
   margin-left: 3px;
   font-family: "Titillium web";
   /* border: 1px solid red; */
@@ -17,13 +17,15 @@ const StyledContenitoreUtenti = styled.div`
   overflow-y: hidden;
   ::-webkit-scrollbar {
     width: 0px;
-    height: 6px;
+    height: 12px;
   }
   ::-webkit-scrollbar-track {
     background: #888;
+    border-radius: 10px;
   }
   ::-webkit-scrollbar-thumb {
     background: #871239;
+    border-radius: 10px;
   }
 `;
 
@@ -35,15 +37,20 @@ export default function ContenitoreUtenti(props) {
   let mStyle = {};
   if (!vediFish) {
     mStyle = {
-      backgroundColor: "#88123A",
+      backgroundColor: "#fff",
       opacity: "0.95",
       // boxShadow: "rgb(51, 51, 51) 2px 2px 5px 2px",
-      color: "white"
+      color: "white",
+      overflowX: "hidden",
+      overflowY: "hidden"
     };
   }
 
+  const nascondiScrollBar =
+    utenti.length <= 6 ? { overflowX: "hidden", overflowY: "hidden" } : {};
+
   return (
-    <StyledContenitoreUtenti style={mStyle}>
+    <StyledContenitoreUtenti style={{ ...mStyle, ...nascondiScrollBar }}>
       <div
         style={{
           minWidth: 566,

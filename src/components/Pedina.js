@@ -57,7 +57,7 @@ export default function Pedina(props) {
         position: "absolute",
 
         zIndex: zindex,
-        boxShadow: "2px 2px 5px 2px #333",
+        boxShadow: "2px 2px 5px 1px #999",
         cursor: "pointer",
         border: "2px solid #fff"
       }}
