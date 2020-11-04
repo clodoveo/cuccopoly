@@ -12,10 +12,7 @@ export default function DettagliUtente(props) {
     iniziale: {
       display: "none",
       opacity: 1,
-      //clipPath: "circle(0px at 0px 0px)",
-      //clipPath: "circle(1000px at 0px 0px)",
       flexDirection: "column",
-      //rotateY: -45,
       rotateX: 0,
       rotateZ: 45,
       width: 150,
@@ -25,8 +22,6 @@ export default function DettagliUtente(props) {
       display: "flex",
       flexDirection: "column",
       opacity: 1,
-      //clipPath: "circle(1000px at 0px 0px)",
-
       rotateX: 0,
       rotateY: 0,
       rotateZ: 0,
@@ -48,8 +43,7 @@ export default function DettagliUtente(props) {
         width: "calc(100% + 2px)",
         backgroundColor: "#fff",
         padding: "0px 50px",
-        flexDirection: "column",
-        position: "relative"
+        flexDirection: "column"
       }}
     >
       <div
@@ -57,7 +51,6 @@ export default function DettagliUtente(props) {
           fontSize: "30px",
           borderBottom: "1px solid #eee",
           textTransform: "capitalize",
-
           fontWeight: 600,
           color: "#000",
           padding: "20px 0"

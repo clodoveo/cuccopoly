@@ -6,12 +6,11 @@ import DettagliUtente from "./DettagliUtente";
 const StyledContenitoreUtenti = styled.div`
   width: 566px;
   height: 367px;
-  margin-left: 3px;
   font-family: "Titillium web";
   /* border: 1px solid red; */
   position: absolute;
-  left: 275px;
-  top: 269px;
+  left: 276px;
+  top: 267px;
   /* display: flex; */
   overflow-x: scroll;
   overflow-y: hidden;
@@ -38,7 +37,7 @@ export default function ContenitoreUtenti(props) {
   if (!vediFish) {
     mStyle = {
       backgroundColor: "#fff",
-      opacity: "0.95",
+      opacity: "1",
       // boxShadow: "rgb(51, 51, 51) 2px 2px 5px 2px",
       color: "white",
       overflowX: "hidden",
@@ -54,7 +53,7 @@ export default function ContenitoreUtenti(props) {
       <div
         style={{
           minWidth: 566,
-          minHeight: 340,
+          minHeight: 334,
           width: 95 * utenti.length,
           display: "flex"
         }}
