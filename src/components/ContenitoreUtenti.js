@@ -7,6 +7,7 @@ const StyledContenitoreUtenti = styled.div`
   width: 566px;
   height: 340px;
   margin-left: 3px;
+  font-family: "Titillium web";
   /* border: 1px solid red; */
   position: absolute;
   left: 275px;

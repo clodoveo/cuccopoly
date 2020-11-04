@@ -9,17 +9,24 @@ export default function DettagliUtente(props) {
     iniziale: {
       display: "none",
       opacity: 1,
-      clipPath: "circle(0px at 0px 0px)",
-      flexDirection: "column"
+      //clipPath: "circle(0px at 0px 0px)",
+      //clipPath: "circle(1000px at 0px 0px)",
+      flexDirection: "column",
+      rotateY: -45,
+      rotateX: 0,
+      rotateZ: 45
     },
     finale: {
       display: "flex",
       flexDirection: "column",
       opacity: 1,
-      clipPath: "circle(1000px at 0px 0px)",
+      //clipPath: "circle(1000px at 0px 0px)",
 
+      rotateX: 0,
+      rotateY: 0,
+      rotateZ: 0,
       transition: {
-        duration: 0.5
+        duration: 0.2
       }
     }
   };
