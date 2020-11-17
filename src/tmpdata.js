@@ -1,7 +1,7 @@
 const caselle = [
   {
     id: 0,
-    x: 91,
+    x: 11,
     y: 0,
     w: 76,
     h: 93,
@@ -10,7 +10,7 @@ const caselle = [
   },
   {
     id: 1,
-    x: 174,
+    x: 91,
     y: 0,
     w: 76,
     h: 93,
@@ -19,6 +19,15 @@ const caselle = [
   },
   {
     id: 2,
+    x: 174,
+    y: 0,
+    w: 76,
+    h: 93,
+    special: false,
+    testo: ""
+  },
+  {
+    id: 3,
     x: 258,
     y: -5,
     w: 80,
@@ -27,17 +36,8 @@ const caselle = [
     testo: "Pizzette per tutti!"
   },
   {
-    id: 3,
-    x: 340,
-    y: 0,
-    w: 76,
-    h: 93,
-    special: false,
-    testo: ""
-  },
-  {
     id: 4,
-    x: 423,
+    x: 340,
     y: 0,
     w: 76,
     h: 93,
@@ -46,6 +46,15 @@ const caselle = [
   },
   {
     id: 5,
+    x: 423,
+    y: 0,
+    w: 76,
+    h: 93,
+    special: false,
+    testo: ""
+  },
+  {
+    id: 6,
     x: 506,
     y: -5,
     w: 80,
@@ -54,17 +63,8 @@ const caselle = [
     testo: "Ruba un Jolly o donalo a chi vuoi"
   },
   {
-    id: 6,
-    x: 588,
-    y: 0,
-    w: 76,
-    h: 93,
-    special: false,
-    testo: ""
-  },
-  {
     id: 7,
-    x: 671,
+    x: 588,
     y: 0,
     w: 76,
     h: 93,
@@ -73,7 +73,7 @@ const caselle = [
   },
   {
     id: 8,
-    x: 754,
+    x: 671,
     y: 0,
     w: 76,
     h: 93,
@@ -82,7 +82,7 @@ const caselle = [
   },
   {
     id: 9,
-    x: 837,
+    x: 754,
     y: 0,
     w: 76,
     h: 93,
@@ -91,7 +91,7 @@ const caselle = [
   },
   {
     id: 10,
-    x: 920,
+    x: 837,
     y: 0,
     w: 76,
     h: 93,
@@ -100,6 +100,15 @@ const caselle = [
   },
   {
     id: 11,
+    x: 920,
+    y: 0,
+    w: 76,
+    h: 93,
+    special: false,
+    testo: ""
+  },
+  {
+    id: 12,
     x: 1003,
     y: -5,
     w: 80,
@@ -108,7 +117,7 @@ const caselle = [
     testo: "Porta una torta"
   },
   {
-    id: 12,
+    id: 13,
     x: 1003,
     y: 100,
     w: 76,
@@ -117,7 +126,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 13,
+    id: 14,
     x: 1005,
     y: 212,
     w: 80,
@@ -126,7 +135,7 @@ const caselle = [
     testo: "Lascia il caffè offerto a tutto lo staff"
   },
   {
-    id: 14,
+    id: 15,
     x: 1003,
     y: 318,
     w: 76,
@@ -135,18 +144,9 @@ const caselle = [
     testo: ""
   },
   {
-    id: 15,
-    x: 1003,
-    y: 426,
-    w: 76,
-    h: 103,
-    special: false,
-    testo: ""
-  },
-  {
     id: 16,
     x: 1003,
-    y: 533,
+    y: 426,
     w: 76,
     h: 103,
     special: false,
@@ -155,7 +155,7 @@ const caselle = [
   {
     id: 17,
     x: 1003,
-    y: 643,
+    y: 533,
     w: 76,
     h: 103,
     special: false,
@@ -163,6 +163,15 @@ const caselle = [
   },
   {
     id: 18,
+    x: 1003,
+    y: 643,
+    w: 76,
+    h: 103,
+    special: false,
+    testo: ""
+  },
+  {
+    id: 19,
     x: 922,
     y: 648,
     w: 80,
@@ -171,7 +180,7 @@ const caselle = [
     testo: "Pizzette per tutti!"
   },
   {
-    id: 19,
+    id: 20,
     x: 836,
     y: 643,
     w: 76,
@@ -180,7 +189,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 20,
+    id: 21,
     x: 755,
     y: 649,
     w: 80,
@@ -189,7 +198,7 @@ const caselle = [
     testo: "Porta una torta!"
   },
   {
-    id: 21,
+    id: 22,
     x: 672,
     y: 643,
     w: 76,
@@ -198,7 +207,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 22,
+    id: 23,
     x: 588,
     y: 643,
     w: 76,
@@ -207,7 +216,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 23,
+    id: 24,
     x: 505,
     y: 643,
     w: 76,
@@ -216,7 +225,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 24,
+    id: 25,
     x: 423,
     y: 649,
     w: 80,
@@ -225,7 +234,7 @@ const caselle = [
     testo: "Riordina i fogli visita nelle rispettive cartelline"
   },
   {
-    id: 25,
+    id: 26,
     x: 340,
     y: 643,
     w: 76,
@@ -234,7 +243,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 26,
+    id: 27,
     x: 256,
     y: 643,
     w: 76,
@@ -243,7 +252,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 27,
+    id: 28,
     x: 175,
     y: 643,
     w: 76,
@@ -252,7 +261,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 28,
+    id: 29,
     x: 92,
     y: 643,
     w: 76,
@@ -261,7 +270,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 29,
+    id: 30,
     x: 9,
     y: 649,
     w: 80,
@@ -270,7 +279,7 @@ const caselle = [
     testo: "Pizzette per tutti!"
   },
   {
-    id: 30,
+    id: 31,
     x: 9,
     y: 535,
     w: 76,
@@ -279,7 +288,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 31,
+    id: 32,
     x: 9,
     y: 426,
     w: 76,
@@ -288,7 +297,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 32,
+    id: 33,
     x: 9,
     y: 317,
     w: 76,
@@ -297,7 +306,7 @@ const caselle = [
     testo: ""
   },
   {
-    id: 33,
+    id: 34,
     x: 9,
     y: 209,
     w: 76,
