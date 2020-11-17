@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Casella from "./Casella";
+import UsaJolly from "./UsaJolly";
 
 const StyledTabellone = styled.div`
   width: 1091px;
@@ -47,6 +48,7 @@ export default function Tabellone(props) {
           <Casella item={c} key={c.id} />
         ))}
         {props.children}
+        <UsaJolly></UsaJolly>
       </StyledTabellone>
     );
   }
