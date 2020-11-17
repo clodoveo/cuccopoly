@@ -21,6 +21,21 @@ export default function UsaJollyForm(props) {
         left: "284px"
       }}
     >
+      {" "}
+      <button
+        onClick={props.toggle}
+        style={{
+          border: "none",
+          backgroundColor: "transparent",
+          position: "absolute",
+          top: "10px",
+          right: "10px",
+          fontWeight: "800",
+          color: "#88123A"
+        }}
+      >
+        X
+      </button>
       <form
         onSubmit={handleSubmit}
         style={{
@@ -33,7 +48,6 @@ export default function UsaJollyForm(props) {
           flexDirection: "column"
         }}
       >
-        <button onClick={props.toggle}>X</button>
         <div>
           <label>
             <h1 style={{ fontFamily: "Titillium Web" }}>Usa Jolly per:</h1>
