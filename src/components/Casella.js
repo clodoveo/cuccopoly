@@ -43,7 +43,7 @@ export default function Casella(props) {
       </StyledTitoloCasella>
 
       <StyledTestoCasella>
-        <div>{item.testo}</div>
+        <div style={{ fontFamily: "Titillium Web" }}>{item.testo}</div>
       </StyledTestoCasella>
     </StyledCasella>
   );
