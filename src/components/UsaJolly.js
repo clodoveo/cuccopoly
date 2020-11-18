@@ -7,6 +7,39 @@ export default function UsaJolly(props) {
   function handleClick() {
     setClicked((old) => !old);
   }
+
+  const buttonEnabledStyle = {
+    position: "absolute",
+    top: "135px",
+    left: "115px",
+    height: "50px",
+    width: "150px",
+    backgroundColor: "#88123A",
+    border: "2px solid #fff",
+    color: "#fff",
+    fontFamily: "Times",
+    fontSize: "15px",
+    boxShadow: "1px 1px 2px 1px #999",
+    cursor: "pointer"
+  };
+
+  const buttonDisabledStyle = {
+    position: "absolute",
+    top: "135px",
+    left: "115px",
+    height: "50px",
+    width: "150px",
+    backgroundColor: "#ccc",
+    border: "2px solid #fff",
+    color: "#fff",
+    fontFamily: "Times",
+    fontSize: "15px",
+    boxShadow: "1px 1px 2px 1px #999",
+    cursor: "pointer",
+    opacity: "0.5",
+    textDecoration: "line-through"
+  };
+
   return (
     <>
       <button
@@ -16,21 +49,11 @@ export default function UsaJolly(props) {
           repeatType: "reverse",
           duration: 0.6
         }}
-        style={{
-          position: "absolute",
-          top: "135px",
-          left: "115px",
-          height: "50px",
-          width: "150px",
-          backgroundColor: "#88123A",
-          border: "2px solid #fff",
-          color: "#fff",
-          fontFamily: "Times",
-          fontSize: "15px",
-          boxShadow: "1px 1px 2px 1px #999",
-          cursor: "pointer"
-        }}
+        style={
+          utenteCorrente.jolly < 1 ? buttonDisabledStyle : buttonEnabledStyle
+        }
         onClick={handleClick}
+        disabled={utenteCorrente.jolly < 1}
       >
         USA JOLLY
       </button>

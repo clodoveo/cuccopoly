@@ -44,7 +44,7 @@ export default function UsaJollyForm(props) {
 
   function onSelectChangeHandler(e) {
     setSelectedValue(e.target.value);
-    if (e.target.value == "ribasso prezzo non autorizzato") {
+    if (e.target.value === "ribasso prezzo non autorizzato") {
       setCausale("");
     }
   }
