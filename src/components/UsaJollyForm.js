@@ -55,7 +55,15 @@ export default function UsaJollyForm(props) {
         </div>
         <br />
         <div style={{ marginBottom: "50px" }}>
-          <select>
+          <select
+            style={{
+              height: "45px",
+              border: "none",
+              borderBottom: "1px solid #ccc",
+              padding: "0 15px",
+              fontSize: "17px"
+            }}
+          >
             <option selected>Seleziona...</option>
             <option value="avanzare" disabled={disabledAvanza}>
               Avanzare
