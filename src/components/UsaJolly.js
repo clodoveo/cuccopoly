@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import UsaJollyForm from "./UsaJollyForm";
 export default function UsaJolly(props) {
   const [clicked, setClicked] = useState(false);
-
+  const { utenteCorrente } = props;
   function handleClick() {
     setClicked((old) => !old);
   }
@@ -34,7 +34,9 @@ export default function UsaJolly(props) {
       >
         USA JOLLY
       </button>
-      {clicked && <UsaJollyForm toggle={handleClick} />}
+      {clicked && (
+        <UsaJollyForm toggle={handleClick} utenteCorrente={utenteCorrente} />
+      )}
     </>
   );
 }

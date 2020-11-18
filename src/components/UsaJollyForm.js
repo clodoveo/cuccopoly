@@ -1,10 +1,58 @@
-import React from "react";
+import { useReducedMotion } from "framer-motion";
+import React, { useState } from "react";
 
 export default function UsaJollyForm(props) {
   const disabledAvanza = true;
-  function handleSubmit(e) {
+
+  const [selectedValue, setSelectedValue] = useState("");
+  const [causale, setCausale] = useState("");
+  const { utenteCorrente } = props;
+
+  async function handleSubmit(e) {
     e.preventDefault();
+
+    var details = {
+      cuccopoly_partita: utenteCorrente.partita,
+      numero: 1,
+      motivo: causale,
+      segno: "-",
+      _user: utenteCorrente.id
+    };
+
+    var formBody = [];
+    for (var property in details) {
+      var encodedKey = encodeURIComponent(property);
+      var encodedValue = encodeURIComponent(details[property]);
+      formBody.push(encodedKey + "=" + encodedValue);
+    }
+
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+      body: formBody.join("&")
+    };
+    const res = await fetch(
+      "https://dev-hl.terotero.it/api/gamification/usa_jolly/",
+      requestOptions
+    );
+    const data = await res.json();
+    document.location.reload();
+    console.log(data);
   }
+
+  function onSelectChangeHandler(e) {
+    setSelectedValue(e.target.value);
+    if (e.target.value == "ribasso prezzo non autorizzato") {
+      setCausale("");
+    }
+  }
+
+  function onCausaleChangeHandler(e) {
+    setCausale(e.target.value);
+  }
+
   return (
     <div
       style={{
@@ -44,8 +92,9 @@ export default function UsaJollyForm(props) {
           display: "flex",
           placeItems: "center",
           padding: "20px 50px",
-          justifyContent: "center",
-          flexDirection: "column"
+          justifyContent: "space-between",
+          flexDirection: "column",
+          height: "319px"
         }}
       >
         <div>
@@ -53,18 +102,20 @@ export default function UsaJollyForm(props) {
             <h1 style={{ fontFamily: "Titillium Web" }}>Usa Jolly per:</h1>
           </label>
         </div>
-        <br />
-        <div style={{ marginBottom: "50px" }}>
+
+        <div>
           <select
+            onChange={onSelectChangeHandler}
             style={{
               height: "45px",
               border: "none",
               borderBottom: "1px solid #ccc",
               padding: "0 15px",
-              fontSize: "17px"
+              fontSize: "17px",
+              width: "300px"
             }}
           >
-            <option selected>Seleziona...</option>
+            <option>Seleziona...</option>
             <option value="avanzare" disabled={disabledAvanza}>
               Avanzare
             </option>
@@ -73,6 +124,24 @@ export default function UsaJollyForm(props) {
             </option>
           </select>
         </div>
+        {selectedValue === "ribasso prezzo non autorizzato" && (
+          <div>
+            <input
+              type="text"
+              style={{
+                height: "45px",
+                fontSize: "17px",
+                border: "none",
+                borderBottom: "1px solid #ccc",
+                paddingLeft: "5px",
+                width: "300px"
+              }}
+              placeholder="inserisci riferimento e/o note"
+              value={causale}
+              onChange={onCausaleChangeHandler}
+            />
+          </div>
+        )}
         <div>
           <button
             type="submit"

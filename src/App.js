@@ -8,6 +8,7 @@ export default function App() {
   const [utenteSelezionato, setUtenteSelezionato] = useState(false);
   const [vediFish, setVediFish] = useState(true);
   const [utenti, setUtenti] = useState(false);
+  const [utenteCorrente, setUtenteCorrente] = useState(false);
 
   const settaUtente = (utente) => {
     setUtenteSelezionato(utente);
@@ -25,20 +26,29 @@ export default function App() {
   useEffect(() => {
     const getUsers = async () => {
       const agenziaPar = getQueryParams("agenzia", window.location.href);
-
+      const utentePar = getQueryParams("agente", window.location.href);
       const par = agenziaPar ? agenziaPar : 1;
       const res = await fetch(
         "https://dev-hl.terotero.it/api/gamification/users_agenzia/" + par + "/"
       );
       const users = await res.json();
+
+      const resCurrentUser = await fetch(
+        "https://dev-hl.terotero.it/api/gamification/user_current/" +
+          utentePar +
+          "/"
+      );
+      const currentUser = await resCurrentUser.json();
+      console.log(currentUser);
       setUtenti(users);
+      setUtenteCorrente(currentUser);
     };
     getUsers();
   }, []);
 
-  return utenti ? (
+  return utenti && utenteCorrente ? (
     <div className="App">
-      <Tabellone caselle={caselle}>
+      <Tabellone caselle={caselle} utenteCorrente={utenteCorrente}>
         <ContenitoreUtenti
           utenti={utenti}
           utenteSelezionato={utenteSelezionato}

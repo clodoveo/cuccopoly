@@ -13,6 +13,7 @@ const StyledTabellone = styled.div`
 
 export default function Tabellone(props) {
   const { caselle } = props;
+  const { utenteCorrente } = props;
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -49,7 +50,7 @@ export default function Tabellone(props) {
           <Casella item={c} key={c.id} />
         ))}
         {props.children}
-        <UsaJolly></UsaJolly>
+        <UsaJolly utenteCorrente={utenteCorrente}></UsaJolly>
         <Regolamento></Regolamento>
       </StyledTabellone>
     );
