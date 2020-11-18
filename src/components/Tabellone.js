@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Casella from "./Casella";
 import UsaJolly from "./UsaJolly";
+import Regolamento from "./Regolamento";
 
 const StyledTabellone = styled.div`
   width: 1091px;
@@ -49,6 +50,7 @@ export default function Tabellone(props) {
         ))}
         {props.children}
         <UsaJolly></UsaJolly>
+        <Regolamento></Regolamento>
       </StyledTabellone>
     );
   }

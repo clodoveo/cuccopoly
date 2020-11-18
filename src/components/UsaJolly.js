@@ -17,8 +17,8 @@ export default function UsaJolly(props) {
           duration: 0.6
         }}
         style={{
-          position: "fixed",
-          top: "150px",
+          position: "absolute",
+          top: "135px",
           left: "115px",
           height: "50px",
           width: "150px",
@@ -26,7 +26,7 @@ export default function UsaJolly(props) {
           border: "2px solid #fff",
           color: "#fff",
           fontFamily: "Times",
-          fontSize: "20px",
+          fontSize: "15px",
           boxShadow: "1px 1px 2px 1px #999",
           cursor: "pointer"
         }}
