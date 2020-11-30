@@ -54,7 +54,11 @@ export default function App() {
           utenteSelezionato={utenteSelezionato}
           vediFish={vediFish}
         />
-        <Pedine utenti={utenti} setUtenteSelezionato={settaUtente} />
+        <Pedine
+          utenti={utenti}
+          setUtenteSelezionato={settaUtente}
+          utenteCorrente={utenteCorrente}
+        />
       </Tabellone>
     </div>
   ) : (

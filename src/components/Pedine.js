@@ -5,6 +5,7 @@ import { countBy } from "lodash";
 export default function Pedine(props) {
   const { utenti } = props;
   const { setUtenteSelezionato } = props;
+  const { utenteCorrente } = props;
   const contaParimerito = countBy(utenti, "punti");
   console.log(contaParimerito);
   return (
@@ -16,6 +17,7 @@ export default function Pedine(props) {
           utente={u}
           contaParimerito={contaParimerito}
           setUtenteSelezionato={setUtenteSelezionato}
+          utenteCorrente={utenteCorrente}
         />
       ))}
     </>

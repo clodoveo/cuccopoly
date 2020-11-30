@@ -8,6 +8,7 @@ export default function Pedina(props) {
   const { utente } = props;
   const { chiave } = props;
   const { setUtenteSelezionato } = props;
+  const { utenteCorrente } = props;
   const posizioneUtente = caselle.find((c) => utente.punti === c.id);
   const scostamentoPosizioneX = 0 + chiave * 2;
   const scostamentoPosizioneY =
@@ -42,7 +43,16 @@ export default function Pedina(props) {
       }
     }
   };
-
+  const onCLickHandler = (utenteId, utenteCorrenteId) => {
+    if (utenteId === utenteCorrenteId) {
+      //console.log(utenteId, utenteCorrenteId);
+      //alert("sono io");
+      window.open(
+        "https://dev-hl.terotero.it/admin_lp_agenzia/lista_obiettivi/",
+        "_blank"
+      );
+    }
+  };
   return (
     <motion.div
       initial={{}}
@@ -64,6 +74,7 @@ export default function Pedina(props) {
       title={utente.nome}
       onMouseEnter={mouseEnterHandler}
       onMouseLeave={mouseLeaveHandler}
+      onClick={() => onCLickHandler(utente.id, utenteCorrente.id)}
     >
       <motion.span
         style={{
