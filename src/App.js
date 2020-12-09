@@ -34,7 +34,8 @@ export default function App() {
         "https://dev-hl.terotero.it/api/gamification/users_agenzia/" +
           par +
           "/" +
-          partita
+          partita +
+          "/"
       );
       const users = await res.json();
 
