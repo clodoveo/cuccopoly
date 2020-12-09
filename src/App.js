@@ -27,9 +27,14 @@ export default function App() {
     const getUsers = async () => {
       const agenziaPar = getQueryParams("agenzia", window.location.href);
       const utentePar = getQueryParams("agente", window.location.href);
+      const partitaPar = getQueryParams("partita", window.location.href);
+      const partita = partitaPar ? partitaPar : 0;
       const par = agenziaPar ? agenziaPar : 1;
       const res = await fetch(
-        "https://dev-hl.terotero.it/api/gamification/users_agenzia/" + par + "/"
+        "https://dev-hl.terotero.it/api/gamification/users_agenzia/" +
+          par +
+          "/" +
+          partita
       );
       const users = await res.json();
 
