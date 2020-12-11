@@ -42,6 +42,8 @@ export default function App() {
       const resCurrentUser = await fetch(
         "https://dev-hl.terotero.it/api/gamification/user_current/" +
           utentePar +
+          "/" +
+          partita +
           "/"
       );
       const currentUser = await resCurrentUser.json();
