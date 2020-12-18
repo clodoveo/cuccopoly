@@ -43,7 +43,8 @@ export default function DettagliUtente(props) {
         width: "calc(100% + 2px)",
         backgroundColor: "#fff",
         padding: "0px 50px",
-        flexDirection: "column"
+        flexDirection: "column",
+        position: "fixed"
       }}
     >
       <div
