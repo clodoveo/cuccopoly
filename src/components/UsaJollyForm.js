@@ -2,11 +2,12 @@ import { useReducedMotion } from "framer-motion";
 import React, { useState } from "react";
 
 export default function UsaJollyForm(props) {
-  const disabledAvanza = true;
-
   const [selectedValue, setSelectedValue] = useState("");
   const [causale, setCausale] = useState("");
   const { utenteCorrente } = props;
+
+  let disabledAvanza = true;
+  disabledAvanza = utenteCorrente.totali <= 30;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -14,7 +15,7 @@ export default function UsaJollyForm(props) {
     var details = {
       cuccopoly_partita: utenteCorrente.partita,
       numero: 1,
-      motivo: causale,
+      motivo: selectedValue === "avanzare" ? "avanzare" : causale,
       segno: "-",
       _user: utenteCorrente.id
     };

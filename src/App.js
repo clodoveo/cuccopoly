@@ -47,7 +47,7 @@ export default function App() {
           "/"
       );
       const currentUser = await resCurrentUser.json();
-      console.log(currentUser);
+      console.log("utentecorrente", currentUser);
       setUtenti(users);
       setUtenteCorrente(currentUser);
     };
