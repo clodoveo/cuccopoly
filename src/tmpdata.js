@@ -231,7 +231,7 @@ const caselle = [
     w: 80,
     h: 103,
     special: true,
-    testo: "Riordina i fogli visita nelle rispettive cartelline"
+    testo: "Ottieni una recensione 5 stelle da un cliente, amico o parente"
   },
   {
     id: 26,
