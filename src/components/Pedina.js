@@ -9,7 +9,10 @@ export default function Pedina(props) {
   const { chiave } = props;
   const { setUtenteSelezionato } = props;
   const { utenteCorrente } = props;
-  const posizioneUtente = caselle.find((c) => utente.punti === c.id);
+  let posizioneUtente = caselle.find((c) => utente.punti === c.id);
+  posizioneUtente = posizioneUtente
+    ? posizioneUtente
+    : caselle[caselle.length - 1];
   const scostamentoPosizioneX = 0 + chiave * 2;
   const scostamentoPosizioneY =
     5 + 5 * utente.posizione_in_casella * utente.utenti_in_casella;
