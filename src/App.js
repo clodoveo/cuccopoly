@@ -31,7 +31,7 @@ export default function App() {
       const partita = partitaPar ? partitaPar : 0;
       const par = agenziaPar ? agenziaPar : 1;
       const res = await fetch(
-        "https://dev-hl.terotero.it/api/gamification/users_agenzia/" +
+        "https://hlimmobiliare.it/api/gamification/users_agenzia/" +
           par +
           "/" +
           partita +
@@ -40,7 +40,7 @@ export default function App() {
       const users = await res.json();
 
       const resCurrentUser = await fetch(
-        "https://dev-hl.terotero.it/api/gamification/user_current/" +
+        "https://hlimmobiliare.it/api/gamification/user_current/" +
           utentePar +
           "/" +
           partita +

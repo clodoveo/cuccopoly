@@ -35,7 +35,7 @@ export default function UsaJollyForm(props) {
       body: formBody.join("&")
     };
     const res = await fetch(
-      "https://dev-hl.terotero.it/api/gamification/usa_jolly/",
+      "https://hlimmobiliare.it/api/gamification/usa_jolly/",
       requestOptions
     );
     const data = await res.json();

@@ -3,7 +3,7 @@ import React from "react";
 export default function (props) {
   function handleClick() {
     window.open(
-      "https://dev-hl.terotero.it/public/CuccopolyRegolamento.pdf",
+      "https://hlimmobiliare.it/public/CuccopolyRegolamento.pdf",
       "_blank" // <- This is what makes it open in a new window.
     );
   }

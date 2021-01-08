@@ -21,7 +21,7 @@ export default function Tabellone(props) {
       const caricata = () => {
         return new Promise((resolve, reject) => {
           const img = new Image();
-          img.src = "https://dev-hl.terotero.it/img/original/test-min.png";
+          img.src = "https://hlimmobiliare.it/img/original/test-min.png";
           img.onload = resolve();
         });
       };
@@ -42,7 +42,7 @@ export default function Tabellone(props) {
       // }}
       >
         <img
-          src="https://dev-hl.terotero.it/img/original/test-min.png"
+          src="https://hlimmobiliare.it/img/original/test-min.png"
           style={{ position: "absolute", top: 0, left: 0 }}
           alt="tab"
         />

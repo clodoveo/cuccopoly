@@ -51,7 +51,7 @@ export default function Pedina(props) {
       //console.log(utenteId, utenteCorrenteId);
       //alert("sono io");
       window.open(
-        "https://dev-hl.terotero.it/admin_lp_agenzia/lista_obiettivi/",
+        "https://hlimmobiliare.it/admin_lp_agenzia/lista_obiettivi/",
         "_blank"
       );
     }

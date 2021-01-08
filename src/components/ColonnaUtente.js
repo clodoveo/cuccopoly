@@ -59,7 +59,7 @@ export default function ColonnaUtente(props) {
           animate={statoAnimazione ? { y: 88 + i * 80 } : { y: 88 + i * 80 }}
           transition={{ delay: i * 0.3, duration: (i + 1) * 0.5 }}
         >
-          <Jolly src="https://dev-hl.terotero.it/img/original/JollyRound.png"></Jolly>
+          <Jolly src="https://hlimmobiliare.it/img/original/JollyRound.png"></Jolly>
         </motion.div>
       );
     }
